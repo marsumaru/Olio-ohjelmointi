@@ -1,33 +1,42 @@
 #include <iostream>
-#include "h1.h"
+//#include "car.h"
+#include "rectangle.h"
+#include <memory>
+#include "student.h"
 
 using namespace std;
 
 int main()
 {
-    int a, b;
-    int result;
-    int sum;
+    Car car;
+    car.setBrand("Toyota");
+    car.setModel("Yaris");
+    car.setYearModel(2005);
 
-    cout << "Anna luku" << endl;
-    cin >> (a);
+    car.printData();*/
 
-    cout << "Anna toinen luku" << endl;
-    cin >> (b);
+    Rectangle* rect = new Rectangle();
 
-    calcSum(a,b);
-    calcDiv(a,b);
+    rect->setWidth(4.0);
+    rect->setHeight(2.0);
 
-    sum = retSum(a,b);
-    cout << a << "+" <<  b << " = " << sum << endl;
+    cout << " pinta-ala= " << rect->getArea() << endl;
 
-    try {
-        result = retDiv(a,b);
-        cout << a << "/" <<  b << " = " << result << endl;
-    } catch (runtime_error& e) {
-        cout<<"Error: "<< e.what()<< endl;
-    }
+    cout << " ymparysmitta= " << rect->getCircum() << endl;
 
-    return 0;}
+    delete rect;*/
 
+    unique_ptr<Student> student = make_unique<Student>();
 
+    student->setName("Mauno Majava");
+    student->setStudentNumber(14520);
+    student->setAverage(3.2);
+
+    cout << "Opiskelijan nimi: "<< student->getName() << endl;
+
+    cout << "Opiskelijanumero: "<< student->getStudentNumber() << endl;
+
+    cout << "Keskiarvo: "<< student->getAverage() << endl;
+
+    return 0;
+}
