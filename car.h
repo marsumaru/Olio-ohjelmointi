@@ -2,25 +2,15 @@
 #define CAR_H
 #include <iostream>
 
-using namespace std;
-
 class Car
 {
-public:
-    Car();
-
 private:
-    string brand;
-    string model;
+    std::string brand;
+    std::string model;
     int yearModel;
-
-
 public:
     void printData();
-    void setBrand(string);
-    void setModel(string);
-    void setYearModel(int);
-
+    Car(std::string, std::string, int);
 };
 
 #endif // CAR_H

@@ -1,22 +1,13 @@
 #include "car.h"
+#include <iostream>
 
-Car::Car() {
-    brand = "";
-    model = "";
-    yearModel = 0;}
-
-void Car::printData(){
-    cout<< "Auton merkki on "<< brand
-        << " malli on "<< model
-        << " ja valmistusvuosi on " << yearModel << endl;
-    }
-
-void Car::setBrand(string b){
-    brand = b;
-}
-void Car::setModel(string m){
+Car::Car(std::string b, std::string m, int y){
+    brand =b;
     model = m;
-}
-void Car::setYearModel(int y){
     yearModel = y;
+}
+void Car::printData(){
+    std::cout<< "Merkki= "<< brand
+         <<" malli= " << model
+         << " valmistusvuosi= " << yearModel << std::endl;
 }
