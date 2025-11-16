@@ -13,7 +13,7 @@ int main()
     car.setModel("Yaris");
     car.setYearModel(2005);
 
-    car.printData();*/
+    car.printData();
 
     Rectangle* rect = new Rectangle();
 
@@ -24,7 +24,7 @@ int main()
 
     cout << " ymparysmitta= " << rect->getCircum() << endl;
 
-    delete rect;*/
+    delete rect;
 
     unique_ptr<Student> student = make_unique<Student>();
 
@@ -40,3 +40,4 @@ int main()
 
     return 0;
 }
+
